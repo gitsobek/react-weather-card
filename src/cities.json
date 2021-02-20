@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Cracow",
+    "locationType": "City",
+    "coords": {
+      "latt": 50.0341,
+      "long": 19.5611
+    }
+  },
+  {
+    "id": 2,
+    "name": "Warsaw",
+    "locationType": "City",
+    "coords": {
+      "latt": 20.5106,
+      "long": 21.1616
+    }
+  }
+]

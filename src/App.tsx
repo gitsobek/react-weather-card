@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import moment from "moment";
+import "./App.css";
+import { Front } from "./components/Front";
 
 function App() {
+  const now = moment();
+
+  const [flipped, setFlipped] = useState(false);
+
+  const onFlip = (): void => {
+    setFlipped((prevState: boolean) => !prevState);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`panel ${flipped ? 'flip' : ''}`}>
+      <div className="panel-front">
+        <Front
+          date={now}
+          onClick={onFlip}
+        />
+      </div>
+      <div className="panel-back">Panel Back</div>
     </div>
   );
 }
