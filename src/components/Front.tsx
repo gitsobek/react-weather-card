@@ -19,7 +19,7 @@ export const Front: React.FC<FrontProps> = ({ date, currLocation, onClick: onFli
     getWeatherByLocation(currLocation).then((weather: Weather) =>
       setCurrWeather(weather)
     );
-  }, [currLocation.id]);
+  }, [currLocation?.id]);
 
   if (!currWeather) {
     return null;
