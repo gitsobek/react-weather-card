@@ -134,6 +134,14 @@
   outline: none;
 }
 
+.card-options:hover {
+  cursor: pointer;
+}
+
+.card-options:focus-visible {
+  outline: 4px dashed black;
+}
+
 .card-weather {
   font-size: 36px;
 }
@@ -147,4 +155,18 @@
   justify-content: space-between;
   padding: 20px;
   width: 100%;
+}
+
+.card-back-btn {
+  padding: 3px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Saira Condensed";
+  background-color: #5a56fd;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
